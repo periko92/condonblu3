@@ -1,0 +1,16 @@
+on ^1:snotice:*: {
+  snot $1- 
+  msg %debug 2-=( $+ $time $+ )=- 6 $1-
+
+  if ($4 == Net) && ($5 == break:) { msg %debug 0,3 SPLIT 12 $7 deslinka de $6 3 $+ $8- }
+  halt
+}
+
+alias snot {
+  ; si la ventana @sNotices no esta abierta.... la abrimos
+  if ($window(@sNotices).state == $null) window @sNotices -1 -1 400 100 arial 411
+  echo @sNotices 2-=( $+ $time $+ )=- 6 $1-
+}
+
+
+on 1:connect: mode $me +s

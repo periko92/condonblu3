@@ -1,0 +1,9 @@
+on *:text:.creditos:?:{ 
+  msg $nick 12-=(Inicio de Creditos)=-
+  msg $nick CReDiToS DeL 4×.-~*´¨¯¨`*·~-.¸-(_SySTeM_BoT_)-,.-~*´¨¯¨`*·~-.×
+  msg $nick BoT eCHo PoR: DJMeTRaL
+  msg $nick VeRSiON: v121.0
+  msg $nick DeDiCo eL BoT: A Mi Cuñao,A Mi Hermana y a Mis Compañeros de clase ;)
+  msg $nick A Los Que Me Han Ayudado: HaDWaR,CoDeX,NeKRoS
+  msg $nick 12-=(Fin De Creditos)=-
+}

@@ -1,0 +1,3 @@
+[Canales]
+#Bots=#Bots
+#flooders=#flooders

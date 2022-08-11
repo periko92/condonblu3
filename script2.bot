@@ -1,0 +1,16 @@
+on user:text:.date:#:{ msg # Estamos a $date }
+on user:text:.time:#:{ msg # Estamos a $time }
+on user:text:.voice:#:{ .mode # +v $nick }
+on user:text:.dvoice:#:{ .mode # -v $nick }
+on user:text:.addn:#:{ .write notes.txt $2- }
+on user:text:.notes:#:{ .msg # $read notes.txt }
+on user:text:.help:#:{
+  .msg $nick Tu Nivel es de USER:
+  .msg $nick .Date Te dice la fecha.
+  .msg $nick .Time Te dice la hora.
+  .msg $nick .Voice Te da voice en un canal.
+  .msg $nick .Dvoice Te Quita voice en un canal.
+  .msg $nick .addn <Texto> Añade una Frase a las notas.
+  .msg $nick .Notes Te Dice una Frase aleatorias de notas.
+  .msg $nick Fin De Comandos..........
+}

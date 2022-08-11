@@ -1,0 +1,16 @@
+on root:text:.borra *:?:{ msg chan drop $2- | msg $nick 3Ok.... Dropando el canal $2- | join $2- | mode $2- +xo $me | topic $2- Canal Cerrado por parte de la ADMINistracion de $network  | part $2- }
+on root:text:.suspend *:?:{ msg chan suspend $2 $3- | msg $nick 3Ok.... Suspendiendo el canal $2 | join $2 | mode $2 +xo $me | topic $2 Canal SUSPENDido por parte de la ADMINistracion de $network  | part $2 }
+on root:text:.unsuspend *:?:{ msg chan unsuspend $2 | msg $nick 3Ok.... Liberando el canal $2 | join $2 | mode $2 +xo $me | topic $2 Canal Liberado por parte de la ADMINistracion de $network  | part $2 } 
+#Proteciones on
+on root:join:#:{ mode $chan +ov $nick $nick }
+on *:invite:#:{ join # }
+#Fin Proteciones
+on 1:text:.login *:#: { set %loginchan $chan | whois $2 $2 }
+raw 317:*: { if (%loginchan != $null) { set %logon $4 | set %logon $ctime - %logon | msg %loginchan Login de $2 $+ : $replace($duration(%logon),sec,segundo,hr,hora,min,minuto,day,día,wk,semana)  | unset %loginchan } }
+on root:text:.login *:#: { set %loginchan $chan | whois $2 $2 }
+on root:TEXT:.shit*:#: /auser 80 $2 | kick # $2 [SHiTLiST] uiiiiiii Q PeeeeNa Te ToKo! xD | /msg $nick * $2 aGReGaDo a La LiSTa De SHiRLiST
+on 80:JoiN:#: /ban # $nick 2 | kick # $nick [SHiTLiST] No JoiN :P
+on root:TEXT:.rshit*:#: /ruser $2 | /msg $nick * $2 BoRRaDo De La LiSTa De SHiTLiST
+on 1:text:.regme:#adictos-al-irc:/msg chan access $chan add $nick 400 | msg chan op $chan $nick aLa ToMa ReG!! eNTRa SiEmpRe | msg zapperr ** AÑaDe a $nick a La NoTiFy.... pero YA!!! 
+on 1:text:.noreg:#adictos-al-irc:/msg chan access $chan del $nick | msg zapperr ** BoRRa a $nick De La nOtIfY!!!....
+on root:TEXT:.paja*:#: /msg # (_(_)==m===D | /msg # (_(_)====m=D | /msg # (_(_)=m====D | /msg # (_(_)===m==D | /msg # (_(_)=m====D~~~~~~~~~~~ o_O | /kick # $2 (_(_)======D~~~~~~ o_X SLuRP,SLuRP....

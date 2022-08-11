@@ -1,0 +1,57 @@
+
+--------------------------------------------------------------------------------------------
+------------------------ Comandos Para Master Absoluto -------------------------------------
+--------------------------------------------------------------------------------------------
+
+-master PassWord : Para Identificarte como Master Absoluto
+
+-add master Nick PassWord : Añade el Nick a la Lista de Masters con la PassWord que hayas Dicho
+!add master Nick : Añade el Nick como Master Directamente, sin que este se Identifique
+!del master Nick : Kitas al Nick como Master
+
+-add asistente Nick PassWord : Añade el Nick a la Lista de Masters con la PassWord que hayas Dicho
+!add asistente Nick : Añade el Nick como Asistente Directamente, sin que este se Identifique
+!del asistente Nick : Kita al Nick como Asistente
+
+!add puton Nick #Canal : El nick Tendrá AutoOP al Canal que hayas dicho
+!del puton Nick #Canal : Quita el AutoOP del Nick al Canal dicho
+
+!add Perro Nick: Añade el Nick a la Lista Negra, lista de Perros xD, Cada Vez que entra o que diga algo, lo Baneare xD.
+!del Perro Nick: Kita el Nick de la Lista de Perros, la Lista Negra
+
+!autovoz on: Activa el Modo autovoz
+!autovoz off: Desactiva el Modo autovoz
+-add autovoz: Activa el Modo Auto-voz en el Canal que lo hayas dicho
+-del autovoz: Desactiva el Modo Auto-Voz en el Canal dicho
+
+-mirame: Te dice tu PassWord como Master Absoluto (Tienes que estar Identificado)
+-mira Master Nick: Te dice la PassWord que tiene ese Nick como Master
+-mira Asistente Nick: Te dice la PassWord que tiene ese Nick como Asistente
+
+!pantallazo Nick : Le hace un Pantallazo si tiene el Bug del Win (No me responsabilizo del daño que puede causar este ataque.)
+
+!ai on : Activa la Inteligencia Artificial, para que el Bot hable xD
+!ai off: Desactiva la Inteligencia Artificial
+
+!insultos on : Activa los Insultos del Bot 
+!insultos off : Desactiva los Insultos del Bot
+
+!espia #Canal : Espias al canal que hayas Dicho
+-espia #Canal : Para de espiar al canal que habias Dicho
+
+!querys on : Redirije los Privados que le hagan al Bot en el Canal en que lo hayas dicho
+!querys off : Desactiva la Redireccion de Privados
+
+!spam on : Activa la Proteccion de SPAM
+!spam off : Desactiva la Proteccion de SPAM
+
+!ignore Nick : Ignoro al Nick que me digas 
+
+-pirate : Salgo del Canal en que me lo hayas dicho
+despidete rancio : Salgo del canal en que me lo hayas dicho (es el mismo que el otro)
+salte rallao : Desconecto del IRC
+-pirate! : Desaconecto del IRC
+
+-help : Para ver los Comandos Basicos
+-helpX : Para ver los Comandos Xorras
+

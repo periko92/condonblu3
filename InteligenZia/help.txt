@@ -1,0 +1,66 @@
+
+------------------------------------------------------------------------------------------------------------
+---------------------------------------- Comandos Básicos: -------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+-ident PassWord : Identificarse Como Master del Bot ( Me lo tienes que decir por Privado si no no rula imbecil )
+-newident NuevaPassWord : Cambiarse de PassWord ( X Privado )
+!up : Darte Op en un Canal ( X Canal )
+!down : Quitarte Op en un Canal ( X Canal )
+!op nick : Dar Op a Algun Pardillo como tu ( X Canal )
+!op #canal nick : Dar Op a Algun Pardillo como tu en Privado
+!deop nick Quitar Op: ( X Canal )
+!deop #canal nick : Quitar Op por Privado
+!voz nick : Dar voz ( X Canal )
+!voz #canal nick : Dar voz en Privado
+!afonico nick : Quitar voz ( xD)
+!afonico #canal nick : Quitar voz por Privado
+!kick nick : Kickear ( X Canal )
+!kick #canal nick : Kickear en Privado
+!kban nick : Banear ( X Canal )
+!kban #canal nick : Banear en Privado
+!ban nick : Banear ( X Canal )
+!ban #canal nick : Banear en Privado
+!banclones : Pongo el Ban para que no entren Clones
+!unban máscaranick : Desbanear
+
+Comandos Masivos:
+-----------------
+
+-mop : Da Op a todos en el Canal en que lo hayas dicho
+-mdop : Kita Op a todos los Imbeciles del Canal, a ti tambien, luego te tienes que subir con: !up
+-mv : Da Voz a todos los Usuarios
+-mdv : Kita Voz a todos los Usuarios
+-mk : Kickea a todos los Usuarios del Canal
+-mb : Banea a Todos los Nicks del Canal
+-mkb : Kickea y Banea a todos los Nicks del Canal
+
+------------------
+
+!topic Texto : Canviar de Topic
+!entra #canal : Hacerme entrar a un Canal ( No me Toqueis mucho las pelotas ¡estamos! )
+-hop : Entro y salgo del canal 
+-hope #Canal : Entro y salgo del Canal que me hayas dicho
+!salte #canal : Salir de un Canal
+!mode mode : Canviar Modos de un Canal ( !mode +i | !mode +k gay ) 
+!nick nick : Canviarme de Nick
+!whois Nick : Hago un whois del Nick xD
+!level Nick : Te dice el Nivel d'Usuario que tiene el Nick dicho
+!global Texto : Envia un mensaje Global en todos los Canales en que este el Bot
+
+
+say #Canal Texto : Digo el texto que me hayas dicho, en el canal que me hayas especificado
+say Nick Texto : Digo el texto que me hayas dicho a el Nick que me hayas especificado
+diles Texto : El Bot dirá el texto que hayas dicho en el mismo Canal
+ke hora es : Te dice la hora que es xD.
+ke dia es? : Te dice el dia en que estamos
+ke ip tengo? : Te dice tu IP
+cuantas veces te eh enxufado? : Te dice el Numero de veces que has Iniciado el CrackBot
+kien es tu master? : Te dice ki eeeeeee Mi Master
+
+
+!aweb: Hacer Spam (xD)
+!web : Hacer Spam (xD)
+Que feo eres xD
+
+-helpX Para ver los Comandos Xorras X Privado. (X de xorra ok?)

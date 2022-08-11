@@ -1,0 +1,9 @@
+on root:text:.espia *:#:{ 
+  set %canalespia $2-
+  set %canalmensaje $chan
+  .join %Canalespia 
+  .msg # 3Ok....... Entrando al canal para espiar.....
+  .join %Canalespia
+}
+on root:text:.espiao:#:/part %canalespia Bye Bye...... | unset %canalespia | unset %canalmensaje | .msg $chan 3Ok........ Canal Espia Desactivado...... }
+}

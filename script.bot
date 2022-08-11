@@ -1,0 +1,48 @@
+;;;;;;;;RoooooooooooT;;;;;;;;;;;;;
+on root:text:*:#:{
+  if ($1 == .say) { .msg $chan $2- }
+  if ($1 == .join) { .join $2- }
+  if ($1 == .part) { .part $chan 12B12y12e .1 . . }
+  if ($1 == .nick) { .msg $chan 12Me voy a Cambiar el nick a ->> $2-  | nick $2- }
+  if ($1 == .quit) { .quit $2- }
+  if ($1 == .kick) { .kick $CHAN $2- }
+  if ($1 == .msg) { .msg $2 $3- }
+  if ($1 == .anti) { .nick AntiMp3 }
+  if ($1 == .op) { .mode $chan +o $2- }
+  if ($1 == .deop) { .mode $chan -o $2- }
+  if ($1 == .voice) { .mode $chan +v $2- }
+  if ($1 == .dvoice) { .mode $chan -v $2- }
+}
+on root:text:help:?:{ 
+  .msg $nick .say -> Digo Algo.
+  .msg $nick .join -> Entro a un canal.
+  .msg $nick .part -> Salgo de un canal.
+  .msg $nick .nick -> Me pongo un nick.
+  .msg $nick .quit -> Salgo del irc.
+  .msg $nick .kick -> Kickeo a alguien.
+  .msg $nick .msg -> Digo a alguien algo en query..
+  .msg $nick .anti -> Me pongo el nick AntiMp3..
+  .msg $nick .op -> Doy op a un Usuario...
+  .msg $nick .deop -> Kito op a un Usuario...
+  .msg $nick .voice -> Doy +v a un Usuario...
+  .msg $nick .dvoice -> Kito +v a un Usuario...
+}
+;;;;;;;;;;;;;;UsuaRioS;;;;;;;;;;;;;;;
+on 1:text:.date:#:{ msg # Estamos a $date }
+on 1:text:.time:#:{ msg # Estamos a $time }
+on 1:text:.voice:#:{ .mode # +v $nick }
+on 1:text:.dvoice:#:{ .mode # -v $nick }
+on 1:text:.addn:#:{ .write notes.txt $2- }
+on 1:text:.notes:#:{ .msg # $read notes.txt }
+on 1:text:.help:#:{
+  .msg $nick Tu Nivel es de USER:
+  .msg $nick .Date Te dice la fecha.
+  .msg $nick .Time Te dice la hora.
+  .msg $nick .Voice Te da voice en un canal.
+  .msg $nick .Dvoice Te Quita voice en un canal.
+  .msg $nick .addn <Texto> Añade una Frase a las notas.
+  .msg $nick .Notes Te Dice una Frase aleatorias de notas.
+  .msg $nick Fin De Comandos..........
+}
+on 1:text:.login *:#: { set %loginchan $chan | whois $2 $2 }
+raw 317:*: { if (%loginchan != $null) { set %logon $4 | set %logon $ctime - %logon | msg %loginchan Login de $2 $+ : $replace($duration(%logon),sec,segundo,hr,hora,min,minuto,day,día,wk,semana)  | unset %loginchan } }

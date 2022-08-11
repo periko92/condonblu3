@@ -1,0 +1,16 @@
+on *:TEXT:*:?:{
+  .msg %canalprivado ** PRiVaDo: < $+ $nick $+ > $1-  
+}
+on *:INVITE:#:{
+  msg %canalprivado ** InViTe: < $+ $nick $+ > $chan
+}
+on *:notice:*:*:{ msg %canalprivado ** NoTiCe: < $+ $nick $+ > $1- }
+on root:text:.masskick:#:{ masskick $2- }
+on root:text:.massdeop:#:{ nomop $2- }
+on root:text:.massop:#:{ mop $2- }
+on root:text:.estadisticas:#:{
+  .msg $chan EsTaDiSTiKaS De KaNaLeS:
+  .msg $chan EsToY eN:12 $chan(0) Canales.....
+  .msg $chan TeNGo oP eN:12 $canalitos Canales de los 12 $chan(0) que estoy.....
+  .msg $chan FiN eSTaDiSTiKaS......
+}

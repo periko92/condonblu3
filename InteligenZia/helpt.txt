@@ -1,0 +1,14 @@
+--------------------------------------------------------------------------------------------
+------------------------ Comandos Para Asistentes ------------------------------------------
+--------------------------------------------------------------------------------------------
+
+!up : Te sube en el Canal en el cual estes.
+!down : Te quito OP.
+
+!op Nick : Le doy OP al Nick que hayas dicho.
+!deop Nick : Le Quito OP al Nick que me hayas dicho. 
+
+!topic Texto : Canvio el Topic del Canal.
+!banclones : Pongo el Ban para que no entren clones en el Canal
+!diles Texto : Digo en el mismo Canal el texto que me hayas dicho.
+!web : Hago SPAM de mi mismo xD.

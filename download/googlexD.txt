@@ -1,0 +1,61 @@
+on r00lz:TEXT:.google*:#:{
+  webgoogle $2-
+}
+alias google2 {
+  set %google $1 $+ + $+ $2 $+ + $+ $3 $+ + $+ $4 $+ + $+ $5
+  if ($5 == $null) { set %google $1 $+ + $+ $2- $+ + $+ $3 $+ + $+ $4 }
+  if ($4 == $null) { set %google $1 $+ + $+ $2- $+ + $+ $3 }
+  if ($3 == $null) { set %google $1 $+ + $+ $2- }
+  if ($2 == $null) { set %google $1 }
+  sockopen google 216.239.35.101 80
+}
+on 1:sockopen:google: {
+  inc %uso.Google 1
+  unset %encontradoGO
+  .remove  InformacionGO.txt
+  .msg $chan 4Buscando. 12( $+ %google $+ )
+  sockwrite -tn google GET /search?hl=es&ie=ISO-8859-1&q= $+ %google $+ &lr=lang_es HTTP/1.0
+  sockwrite -tn google Accept: *.*, *\/* 
+  sockwrite -tn google Range: bytes=0- 
+  sockwrite -tn google Host: www.google.com
+  sockwrite -tn google $crlf
+}
+on 1:sockread:google: { sockread %google.text | google1 %google.text | unset %google.text }
+on 1:sockclose:google: {
+  google5 %encontradoGo
+  unset %unoGo
+}
+alias google1 {
+  if (008000 isin $2) { 
+    Set %encontradoGo %encontradoGo $gettok($replace($wildtok( $2 ,*w*w*,1,32)  ,>,%espa),2,32) | if (php isin $2) { goto dos }
+    Set %encontradoGo %encontradoGo $gettok($replace($wildtok( $2 ,*php*,1,32)  ,>,%espa),2,32) 
+  }
+  :dos
+}
+alias webgoogle {
+  sockopen webgoogle www.google.com 80
+  set %webgooglebusca $$1 $+ + $+ $2 $+ + $+ $3 $+ + $+ $4 $+ + $+ $5
+  if ($5 == $null) { set %webgooglebusca $1 $+ + $+ $2 $+ + $+ $3 $+ + $+ $4 | .msg $chan Buscando: $1- Espere. | .set %changoogle $chan | halt }
+  if ($4 == $null) { set %webgooglebusca $1 $+ + $+ $2 $+ + $+ $3 | .msg $chan Buscando $1_ en google. | .set $changoogle $chan | halt }
+  if ($3 == $null) { set %webgooglebusca $1 $+ + $+ $2 | .msg $chan Buscando $1 en google. | .set $changoogle $chan | halt }
+  if ($2 == $null) { set %webgooglebusca $1 | .msg $chan Buscando $1 en google. | .set $changoogle $chan | halt }
+}
+on 1:sockopen:webgoogle: {
+  sockwrite -tn $sockname GET /search?hl=es&ie=ISO-8859-1&q= $+ %webgooglebusca $+ &lr=lang_es HTTP/1.0
+  sockwrite -tn $sockname Accept: *.*, *\/*
+  sockwrite -tn $sockname Range: bytes=0-
+  sockwrite -tn $sockname Host: www.google.com
+  sockwrite -tn $sockname $crlf
+}
+on 1:sockclose:webgoogle: {
+}
+on 1:sockread:webgoogle: { sockread %webgoogle.text | webgoogle1 %webgoogle.text | unset %webgoogle.text }
+alias webgoogle1 {
+  inc %ng
+  iF (008000 isin $1-) && (www isin $2) { .msg %changoogle 2 %ng 5Web: $gettok($2,2,62) | set %ng $calc( %ng + 1 ) }
+  dec %ng
+  .Timer 1 5 unset %ng
+}
+
+---
+

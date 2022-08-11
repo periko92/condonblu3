@@ -1,0 +1,6 @@
+[Putas]
+#estelada=[Snitch]
+~Snitch~=#estelada
+Georgia=#tanques
+|PlaStiK|=#tanques
+Pelygro=#tanques

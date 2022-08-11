@@ -1,0 +1,130 @@
+on root:text:!ai *:*:{
+  if (# !isin $2) { msg # Petición Anulada. Tienes que especificar una Canal | halt }
+  if ($readini xD/Canalesai.txt Canales $2 != $null) { msg # Petición Anulada. $2 ya tiene Inabilitada la Inteligencia Artificial | msg $nick Petición Anulada. $2 ya tiene Inabilitada la Inteligencia Artificial | halt }
+  elseif ($readini xD/Canalesai.txt Canales # == $null) { writeini xD/Canalesai.txt Canales $2 | msg # Inabilitada la Inteligencia Artificial en $2 $+ . | msg $nick Inabilitada la Inteligencia Artificial en $2 $+ . }
+}
+#Todo_Scripting on
+on *:text:test:#:/msg # $read $mircdirxD\Holas.txt $read $mircdirxD\gay.txt 
+on *:text:hola:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:hola!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:hi *:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:hi! *:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:holas:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:holas!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:holes:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:nes:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:holes!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:naz:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:nez:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:nax:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:naz!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:wenas:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:wenas!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:nas!:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:nas:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:wenaz*:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:buenas:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:*ke tal*:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:*k tal*:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:*q tal*:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:*que tal*:#:/msg $chan $read $mircdirxD\Holas.txt
+on *:text:no:#:/msg $chan $read $mircdirxD\No.txt
+on *:text:nop:#:/msg $chan $read $mircdirxD\No.txt
+on *:text:ke va:#:/msg $chan $read $mircdirxD\No.txt
+on *:text:juass*:#:/msg $chan $read $mircdirxD\risas.txt
+on *:text:*¬_¬*:#:/msg $chan $read $mircdirxD\¬_¬.txt
+on *:text:*¬¬*:#:/msg $chan $read $mircdirxD\¬_¬.txt
+on *:text:*^_^*:#:/msg $chan $read $mircdirxD\^_^.txt
+on *:text:*U_U*:#:/msg $chan $read $mircdirxD\U_U.txt
+on *:text:no ralles:#:/msg $chan $read $mircdirxD\Rallaos.txt
+on *:text:como rallas*:#:/msg $chan $read $mircdirxD\Rallaos.txt
+on *:text:que no:#:/msg $chan $read $mircdirxD\No.txt
+on *:text:*ke rallas*:#:/msg $chan $read $mircdirxD\Rallaos.txt
+on *:text:*ke rallao:#:/msg $chan $read $mircdirxD\Rallaos.txt
+on *:text:*ok*:#:/msg $chan $read $mircdirxD\ok.txt
+on *:text:*me voy*:#:/msg $chan $read $mircdirxD\Despedidas.txt
+on *:text:*bye:#:/msg $chan $read $mircdirxD\Despedidas.txt
+on *:text:*byez*:#:/msg $chan $read $mircdirxD\Despedidas.txt
+on *:text:*ta mañana*:#:/msg $chan $read $mircdirxD\Despedidas.txt
+on *:text:*me piro*:#:/msg $chan $read $mircdirxD\Despedidas.txt
+on *:text:jajajaja*:#:/msg $chan $read $mircdirxD\risas.txt
+on *:text:*xDDD*:#:/msg $chan $read $mircdirxD\risas.txt
+on *:text:*gay*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*no ralles*:#:/msg $chan $read $mircdirxD\Rallaos.txt
+on *:text:si:#:/msg $chan $read $mircdirxD\Si.txt
+on *:text:*chupa*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*xupa*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*chupamela*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*zorra*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*guarra*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*warra*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*warrah*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*zorra*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*zorrah*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*puta*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*putah*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*idiota*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*tonto*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*tonta*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*imbecil*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*estupida*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*estupido*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*estúpido*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*malparit*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*pardillo*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*pringao*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*pringado*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*estupida*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*desgraciat*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*desgraciado*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*desgraciada*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*estúpida*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*gilipollas*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:*hilipollas*:#:/msg $chan $read $mircdirxD\gay.txt
+on *:text:re *:#:/msg $chan $read $mircdirxD\re.txt
+on *:text:res *:#:/msg $chan $read $mircdirxD\re.txt
+on *:text:rez *:#:/msg $chan $read $mircdirxD\re.txt
+on *:text:re! *:#:/msg $chan $read $mircdirxD\re.txt
+on *:text:*rrrrrrrrrrrrrrrrrr*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*mmmmmmmmmmm*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*pppppppppp*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*aaaaaaaaa*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*nnnnnnnnnnnn*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*cccccccccc*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*iiiiiiiiiiiiiiiiiiiiiiiii*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*eeeeeeeeeeeeee*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*ooooooooooooooo*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*bbbbbbbbbbbbbbb*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*dddddddddddd*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*ffffffffffffffffff*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*ggggggggggg*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*hhhhhhhhhh*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*jjjjjjjjjjjjjjjjjjjjjjjjjjj*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*kkkkkkkkkk*:#:/msg $chan $read $mircdirxD\repeticiones.txt=
+on *:text:*lllllllllllllllllllllllllllllll*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*qqqqqqqqqq*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*rrrrrrrrrrrrrrrrrrrrr*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*ssssssssssss*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*ttttttttttttttttttt*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*uuuuuuuuuu*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*vvvvvvvvvv*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*wwwwwwwww*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*xxxxxxxxxxxx*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*yyyyyyyyyyyy*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*zzzzzzzzzzzz*:#:/msg $chan $read $mircdirxD\repeticiones.txt
+on *:text:*calla*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*caya*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*caia*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*callate*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*cayate*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*caiate*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*schhhhh*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*sshhhhh*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*sschhhhh*:#:/msg $chan $read $mircdirxD\callate.txt
+on *:text:*:#:{
+  if ($1 == $me) { msg $chan $read $mircdirxD\Me.txt }
+  if ($2 == $me) { msg $chan $read $mircdirxD\Me.txt }
+  if ($3 == $me) { msg $chan $read $mircdirxD\Me.txt }
+}
+} 
+}
